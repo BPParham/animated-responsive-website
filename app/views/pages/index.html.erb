@@ -1,9 +1,8 @@
 <%= render "layouts/header" %>
 
 <!--- Start Slider -->
-		<script src="js/jquery.bxslider.min.js"></script><!--For Image Slider-->
-
-		<!--- ADD IMAGE SLIDER HERE -->
+    <%= javascript_include_tag 'jquery.bxslider.min', 'data-turbolinks-track': 'reload' %>
+		<%= render "layouts/image-slider" %>
 
 		<script type="text/javascript">
 			$('.slider1').bxSlider({
