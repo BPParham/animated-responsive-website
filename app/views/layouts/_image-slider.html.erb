@@ -1,7 +1,42 @@
-<div class="slide-wrap">
-  <section class="slider">
-    <ul class="slider1">
-      <li><%= image_tag(src="https://www.w3newbie.com/wp-content/uploads/chest-fly.png", :alt => "rss feed") %></li>
-    </ul>
-  </section>
-</div><!-- End #slide-wrap -->
+
+<!--- Start Slider -->
+    <%= javascript_include_tag 'jquery.bxslider.min', 'data-turbolinks-track': 'reload' %>
+
+    <div class="slide-wrap">
+      <section class="slider">
+        <ul class="slider1">
+          <li><%= image_tag(src="https://www.w3newbie.com/wp-content/uploads/chest-fly.png") %></li>
+          <li><%= image_tag(src="https://www.w3newbie.com/wp-content/uploads/push-ups.png") %></li>
+          <li><%= image_tag(src="https://www.w3newbie.com/wp-content/uploads/inside-gym.png") %></li>
+          <li><%= image_tag(src="https://www.w3newbie.com/wp-content/uploads/training.png") %></li>
+        </ul>
+      </section>
+    </div><!-- End #slide-wrap -->
+
+		<script type="text/javascript">
+			$('.slider1').bxSlider({
+				mode: 'fade',
+				captions: false,
+				auto:true,
+				pager:false,
+
+			});
+			$('.slider2').bxSlider({
+				pager:false,
+				captions: true,
+				maxSlides: 3,
+				minSlides: 1,
+				slideWidth: 230,
+				slideMargin: 10
+			});
+			$('.slider3').bxSlider({
+				mode: 'fade',
+				captions: false,
+				auto:true,
+				pager:false,
+				controls:false,
+			});
+		</script>
+<!--- End Slider -->
+<div class="clearfix">
+</div><!-- End #clearfix -->

@@ -1,31 +1,12 @@
 <%= render "layouts/header" %>
 
-<!--- Start Slider -->
-    <%= javascript_include_tag 'jquery.bxslider.min', 'data-turbolinks-track': 'reload' %>
-		<%= render "layouts/image-slider" %>
+<%= render "layouts/image-slider" %>
 
-		<script type="text/javascript">
-			$('.slider1').bxSlider({
-				mode: 'fade',
-				captions: false,
-				auto:true,
-				pager:false,
-
-			});
-			$('.slider2').bxSlider({
-				pager:false,
-				captions: true,
-				maxSlides: 3,
-				minSlides: 1,
-				slideWidth: 230,
-				slideMargin: 10
-			});
-			$('.slider3').bxSlider({
-				mode: 'fade',
-				captions: false,
-				auto:true,
-				pager:false,
-				controls:false,
-			});
-		</script>
-<!--- End Slider -->
+<div id="inner-wrapper">
+  <%= render "layouts/section1" %>
+  <%= render "layouts/section2" %>
+  <%= render "layouts/section3" %>
+  <div class="clearfix">
+  </div><!-- End #clearfix -->
+</div><!-- End #inner-wrapper -->
+<br>
